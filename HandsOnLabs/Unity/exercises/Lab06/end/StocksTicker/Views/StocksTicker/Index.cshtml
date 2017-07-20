@@ -1,0 +1,70 @@
+﻿@model System.Collections.Generic.IList<StocksTicker.StockQuoteServices.StockQuote>
+
+@{
+    ViewBag.Title = "Simulated stocks ticker";
+}
+
+<h2>Simulated stocks ticker</h2>
+
+@using (Html.BeginForm("AddStock", "StocksTicker", FormMethod.Post))
+{
+    <div>
+        <span>Symbol</span>
+        <input name="symbol" type="text" />
+        <input type="submit" value="Subscribe" />
+    </div>
+    <br />
+    <br />
+}
+
+@if (Model.Count > 0)
+{
+    <div>
+        <table cellspacing="0" cellpadding="5" rules="all" border="1" style="border-collapse: collapse;">
+            <tr>
+                <th scope="col">Symbol</th>
+                <th align="right" scope="col">Volume</th>
+                <th align="right" scope="col">Last</th>
+                <th align="right" scope="col">Change</th>
+                <th align="right" scope="col">Change %</th>
+                <th scope="col">Update</th>
+            </tr>
+            @foreach (var quote in Model)
+            {
+                <tr>
+                    <td>@quote.Symbol</td>
+                    <td align="right">@quote.Volume</td>
+                    <td align="right">@quote.Last</td>
+                    <td align="right">
+                        <span style="color: @ColorForValue(quote.Change);">@quote.Change</span>
+                    </td>
+                    <td align="right">
+                        <span style="color: @ColorForValue(quote.Change);">@quote.PercentChange</span>
+                    </td>
+                    <td>4:37:36 PM</td>
+                </tr>
+            }
+        </table>
+    </div>
+}
+
+
+@section meta {
+    <meta http-equiv="refresh" content="30" />
+}
+
+@functions {
+
+    private string ColorForValue(double value)
+    {
+        if (value >= 0d)
+        {
+            return "Green";
+        }
+        else
+        {
+            return "Red";
+        }
+    }
+
+}

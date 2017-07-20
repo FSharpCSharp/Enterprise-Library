@@ -1,0 +1,37 @@
+﻿//===============================================================================
+// Microsoft patterns & practices
+// Enterprise Library 6 and Unity 3 Hands-on Labs
+//===============================================================================
+// Copyright © Microsoft Corporation.  All rights reserved.
+// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+// OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+// LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+// FITNESS FOR A PARTICULAR PURPOSE.
+//===============================================================================
+
+using System;
+using System.Windows.Forms;
+using Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Configuration;
+using Microsoft.Practices.EnterpriseLibrary.Common.Configuration;
+using Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling;
+
+namespace TransientFaultHandlingHOL
+{
+    static class Program
+    {
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+
+            var settings = RetryPolicyConfigurationSettings.GetRetryPolicySettings(new SystemConfigurationSource());
+            RetryPolicyFactory.SetRetryManager(settings.BuildRetryManager());
+
+            Application.Run(new Main());
+        }
+    }
+}

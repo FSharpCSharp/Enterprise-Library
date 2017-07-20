@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnoughPI", "EnoughPI\EnoughPI.csproj", "{C8E55D58-AD4B-4206-A2ED-455A25AA871F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnoughPI.UnitTests", "EnoughPI.UnitTests\EnoughPI.UnitTests.csproj", "{3738850D-38E0-47FD-AE6F-4BC2D2AB50EC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{67199166-983B-4236-858A-951C641DEC3D}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C8E55D58-AD4B-4206-A2ED-455A25AA871F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8E55D58-AD4B-4206-A2ED-455A25AA871F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8E55D58-AD4B-4206-A2ED-455A25AA871F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8E55D58-AD4B-4206-A2ED-455A25AA871F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3738850D-38E0-47FD-AE6F-4BC2D2AB50EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3738850D-38E0-47FD-AE6F-4BC2D2AB50EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3738850D-38E0-47FD-AE6F-4BC2D2AB50EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3738850D-38E0-47FD-AE6F-4BC2D2AB50EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.1\lib\NET45
+	EndGlobalSection
+EndGlobal

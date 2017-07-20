@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationHOL", "ValidationHOL\ValidationHOL.csproj", "{D1F7D052-3CD9-4455-A6BE-5930E382B78B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationHOL.BusinessLogic", "ValidationHOL.BusinessLogic\ValidationHOL.BusinessLogic.csproj", "{77BA4786-72F7-447A-A952-D99E7494BCEE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{95779125-572D-4831-A643-7AFF3620861B}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1F7D052-3CD9-4455-A6BE-5930E382B78B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1F7D052-3CD9-4455-A6BE-5930E382B78B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1F7D052-3CD9-4455-A6BE-5930E382B78B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1F7D052-3CD9-4455-A6BE-5930E382B78B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77BA4786-72F7-447A-A952-D99E7494BCEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77BA4786-72F7-447A-A952-D99E7494BCEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77BA4786-72F7-447A-A952-D99E7494BCEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77BA4786-72F7-447A-A952-D99E7494BCEE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Validation.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Validation.Integration.WinForms.6.0.1304.0\lib\NET45
+	EndGlobalSection
+EndGlobal
